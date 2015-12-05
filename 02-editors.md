@@ -31,7 +31,7 @@ Both Emacs and vim have built-in interactive tutorials that you can try.
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I'm going to use Emacs. Their tutorials make sense to me and I'll support the FSF any chance I get.
 
 ---
 
@@ -61,6 +61,6 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I've used Sublime for a while now and I like it better than Atom for more reasons than just the colors. (I swear, once I can afford it, I'll actually finally pay for Sublime.) The primary selling point, honestly, is Multiple Selections. The ability to make sweeping edits throughout very quickly makes me love Sublime. The built-in Python console is kind of cool too, along with the console that you can use to make batch changes really fast. Yes Atom is open and it can be customized a little easier but Sublime is what I need right now. The keyboard shortcuts are assigned by me, usually. You can set up tons of macros and completions within Sublime, to achieve maximum efficiency/laziness. The two most important shortcuts: ⌘ + Z for undo and ⌃ + ⌘ + G to select all occurrences of the current selection. 
 
 ---
