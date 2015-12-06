@@ -33,7 +33,9 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 
 What does `ls` do? What do `ls -a`, `ls -l`, and `ls -lh` do? What combinations of those flags are meaningful?
 
-> > ls lists all contents of your working directory. Adding "-a" won't hide directories and files that start with "." (Usually these are hidden as admin files, I think.) 'ls -l' returns the contents in a long form, which shows you names, dates, locations and some other information rather than just the name of each piece of content. Adding the 'h' (human) makes things print in a human readable format. For example, the 'ls -l' command returns a handful of directories for me, full of random numbers. If I use 'ls -lh' instead the numbers come back with descriptions so I can understand what the heck they are. 
+> > ls lists all contents of your working directory. 
+
+Adding "-a" won't hide directories and files that start with "." (Usually these are hidden as admin files, I think.) 'ls -l' returns the contents in a long form, which shows you names, dates, locations and some other information rather than just the name of each piece of content. Adding the 'h' (human) makes things print in a human readable format. For example, the 'ls -l' command returns a handful of directories for me, full of random numbers. If I use 'ls -lh' instead the numbers come back with descriptions so I can understand what the heck they are. 
 
 ---
 
@@ -42,7 +44,9 @@ What does `ls` do? What do `ls -a`, `ls -l`, and `ls -lh` do? What combinations 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > xargs helps you build and execute commands from standard input, usually a combination the terminal can't handle. This is exceptionally useful for finding certain types of files and applying actions to them, usually delete or maybe rename. One example:
+> > xargs helps you build and execute commands from standard input, usually a combination the terminal can't handle. 
+
+This is exceptionally useful for finding certain types of files and applying actions to them, usually delete or maybe rename. One example:
 
 find /stuff -name picture -type f -print | xargs /bin/rm -f
 
