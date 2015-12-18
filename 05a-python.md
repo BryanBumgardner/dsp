@@ -27,7 +27,10 @@ How are Python lists and sets similar and different? Give examples of using both
 >> Lists keep things in order, where sets do not. Sets forbid duplicates, where lists do not. If you try to check for a value in a huge list data set, it would be majorly problematic. Sets are much easier to check membership, if you have hashable items in it. Because sets are immutable, they save memory by not allowing changes, which makes searching them faster to process. Granted, you might have to make decisions based on the limitations of the first sentence. 
 
 >> Lists are the simplest sequences, I think. They can be combinations of whatever. 
->> An example: '''list1 = ['apple', 'orange', 'pear', 'banana'];'''
+>> An example: 
+'''
+list1 = ['apple', 'orange', 'pear', 'banana'];
+'''
 
 >>Sets, on the other hand, break whatever you put into them into specific objects. See how this example breaks up the letters and doesn't recognize them together. I assign set to x
 
