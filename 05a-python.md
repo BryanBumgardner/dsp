@@ -14,7 +14,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 >> Tuples and lists are both sequences, but they differ in a few ways. You can't modify tuples, which means they are 'immutable,' to use Python terminology. The information inside them can't be changed or updated, so you have to write around them to get what you want. They also use parentheses where lists use brackets. Lists on the other hand are easily changed and broken down collections of objects in a specified order. 
 
->> You can't use lists as dictionary keys. In short, to keep Python dictionaries efficient, certain hash functions are used to explore objects. Lists, by their nature, clash against the specific algorithms used by dictionaries. They are containers and don't hash appropriately, which means you could have tons of problems. You might search two copies of the same list and get returns that shows two completely different answers are equivalent. Even if you hash lists by their ids, you'll always get errors like that or a direct KeyError if you used a list literal.
+>> You can't use lists as dictionary keys. In short, to keep Python dictionaries efficient, certain hash functions are used to explore objects. Lists, by their nature, clash against the specific algorithms used by dictionaries to assign values to keys. They are containers and don't hash appropriately, which means you could have tons of problems. You might search two copies of the same list and get returns that shows two completely different answers are equivalent. Even if you hash lists by their ids, you'll always get errors like that or a direct KeyError if you used a list literal.
 
 >> Tuples work as keys in dictionaries because their contents are immutable and can be hashed without concerns of modification. 
 
@@ -24,7 +24,14 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists keep things in order, where sets do not. Sets forbid duplicates, where lists do not. If you try to check for a value in a huge list data set, it would be majorly problematic. Sets are much easier to check membership, if you have hashable items in it. Because sets are immutable, they save memory by not allowing changes, which makes searching them faster to process. Granted, you might have to make decisions based on the limitations of the first sentence. 
+
+>> Lists are the simplest sequences, I think. They can be combinations of whatever. 
+>> An example: '''list1 = ['apple', 'orange', 'pear', 'banana'];'''
+
+>>Sets, on the other hand, break whatever you put into them into specific objects. See how this example breaks up the letters and doesn't recognize them together. I assign set to x
+
+>>x = 
 
 ---
 
