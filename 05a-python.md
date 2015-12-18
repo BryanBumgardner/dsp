@@ -12,7 +12,11 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Tuples and lists are both sequences, but they differ in a few ways. You can't modify tuples, which means they are 'immutable,' to use Python terminology. The information inside them can't be changed or updated, so you have to write around them to get what you want. They also use parentheses where lists use brackets. Lists on the other hand are easily changed and broken down collections of objects in a specified order. 
+
+>> You can't use lists as dictionary keys. In short, to keep Python dictionaries efficient, certain hash functions are used to explore objects. Lists, by their nature, clash against the specific algorithms used by dictionaries. They are containers and don't hash appropriately, which means you could have tons of problems. You might search two copies of the same list and get returns that shows two completely different answers are equivalent. Even if you hash lists by their ids, you'll always get errors like that or a direct KeyError if you used a list literal.
+
+>> Tuples work as keys in dictionaries because their contents are immutable and can be hashed without concerns of modification. 
 
 ---
 
