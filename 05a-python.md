@@ -28,13 +28,19 @@ How are Python lists and sets similar and different? Give examples of using both
 
 >> Lists are the simplest sequences, I think. They can be combinations of whatever. 
 >> An example: 
-'''
+```
 list1 = ['apple', 'orange', 'pear', 'banana'];
-'''
+```
 
->>Sets, on the other hand, break whatever you put into them into specific objects. See how this example breaks up the letters and doesn't recognize them together. I assign set to x
+>>Sets, on the other hand, break whatever you put into them into specific objects. See how this example breaks up the characters and doesn't recognize them together. Also notice how characters originally  I assign the set (Hello, World) to set. Then when I call x, what I get is a list of the characters unconnected, illustrating what sets do.
 
->>x = 
+```
+>>>x = set(Hello, World)
+>>>x 
+{',', 'W', 'o', 'd', 'l', 'H', 'e', ' ', 'r'}
+```
+
+>>>Hello, World! I'm sort of understanding Python more! 
 
 ---
 
