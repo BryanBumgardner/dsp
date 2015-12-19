@@ -15,7 +15,16 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+#start!!
+>>> def match_ends(words):
+...     amt = 0
+...     for word in words:
+...             if len(word) > 1 and word[0] == word[-1]:
+...                     amt += 1
+...     return amt
+... 
+>>> match_ends(['aba', 'xyz', 'aa', 'x', 'bbb'])
+3
 
 
 def front_x(words):
@@ -32,7 +41,19 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+#start! This one was kind of hard.
+>>> def front_x(words):
+...     xlist = []
+...     alist = []
+...     for word in words:
+...             if word.startswith('x'):
+...                     xlist.append(word)
+...             else:
+...                     alist.append(word)
+...     return sorted(xlist) + sorted(alist)
+... 
+>>> front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
+['xaa', 'xzz', 'axx', 'bbb', 'ccc']
 
 
 def sort_last(tuples):
@@ -49,7 +70,15 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+#start!
+>>> def last(t):
+...     return t[-1]
+... 
+>>> def sort_last(tuples):
+...     return sorted(tuples, key=last)
+... 
+>>> sort_last([(1, 3), (3, 2), (2, 1)])
+[(2, 1), (3, 2), (1, 3)]
 
 
 def remove_adjacent(nums):
@@ -68,8 +97,18 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
-
+#start! ooh la la
+>>> def remove_adjacent(nums):
+...     i = 1
+...     while i < len(nums):
+...             if nums[i] == nums[i-1]:
+...                     nums.pop(i)
+...                     i -= 1
+...             i += 1
+...     return nums
+... 
+>>> remove_adjacent([1, 2, 2, 3])
+[1, 2, 3]
 
 def linear_merge(list1, list2):
     """
@@ -85,4 +124,25 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+#Start! standard merge algorithm, right?
+def linear_merge(list1, list2):
+...     result = []
+...     i = j = 0
+...     total = len(list1) + len(list2)
+...     while len(result) != total:
+...             if len(list1) == i:
+...                     result += list2[j:]
+...                     break
+...             elif len(list2) == j:
+...                     result += list1[i:]
+...                     break
+...             elif list1[i] < list2[j]:
+...                     result.append(list1[i])
+...                     i += 1
+...             else:
+...                     result.append(list2[j])
+...                     j += 1
+...     return result
+... 
+>>> linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc'])
+['aa', 'bb', 'cc', 'xx', 'zz']
