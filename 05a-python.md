@@ -13,7 +13,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
 
->> After I finished this section, I went to see what other people had written as their answers. I discovered I could barely understand a lot of what people wrote. I was a writer first and a programmer second, so through the rest of these answers I'm going to try and explain things simply and without too much technical jargon unless necessary - that's how I can understand it myself. If I need to be more technical let me know, I'm still a beginner with Python. 
+>> I was a writer first and a programmer second, so through the rest of these answers I'm going to try and explain things simply and without too much technical jargon unless necessary - that's how I can understand it myself. If I need to be more technical let me know, I'm still a beginner with Python. 
 
 >> Tuples and lists are both sequences, but they differ in a few ways. You can't modify tuples, which means they are 'immutable.' The information inside them can't be changed or updated. They also use parentheses where lists use brackets. Lists on the other hand are easily changed and broken down collections of objects in a specified order. 
 
@@ -72,7 +72,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 >>> (lambda x: x*2)(5)
 10
 ```
->> Now, to use in the `key` for a `sorted` argument, complex record keeping on the Mystery Machine:
+>> Now, to use in the `key` for a `sorted` argument, complex record keeping in the Mystery Machine:
 ```
 >>> mystery_tuples = [
 ...     ('a', '2', 'Velma'),
@@ -84,14 +84,45 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 >>> sorted(mystery_tuples, key= lambda mystery: mystery[2])
 [('d', '4', 'Daphne'), ('e', '5', 'Fred'), ('c', '3', 'Scooby'), ('b', '1', 'Shaggy'), ('a', '2', 'Velma')]
 ```
->> In this case I sorted them by the first letter of the final part of the tuple, where their names are entered. 
+>>In this case I sorted them by the first letter of the final part of the tuple, where their names are entered. 
+
+
+
 ---
 
 ###Q4. List Comprehension, Map &amp; Filter
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions are short ways of making lists. This is useful when you're making a list that's a result of some operation applied to another sequence, for example. List comprehensions can basically substitute for `lambda`, `map`, `filter` and `reduce` in a way that's easier for mathematicians to read, if you're into that sort of thing. Some of these rules and syntax changed in Python 3.
+```
+# a quick list of squares, as a list comprehension
+>>> squaredn = [x ** 2 for x in range(10)]
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+>>That same list, using `map`. 
+```
+>> squaredn = list(map(lambda x: x**2, range(10)))
+>> squaredn
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+``` 
+>> Or maybe you prefer `filter`? I can't even figure out how to get those numbers using just `filter` without writing something totally unreadable. This filter shows us all the answers when `x` is less than 5, from our original range of 10.
+```
+list(map(lambda x: x ** 2, filter(lambda x: x < 5, range(10))))
+[0, 1, 4, 9, 16]
+```
+>> We can do set comprehensions too. This `set` will show me all the characters in `'scooby'` if they aren't duplicated in the string `'doo'`. Much science, very Python. 
+```
+>>> set = {x for x in 'scooby' if x not in 'doo'}
+>>> set
+{'b', 's', 'c', 'y'}
+```
+>> Dictionary comprehensions are easy to do as well. Overall, comprehensions are much easier to read, even if they are limited in complexity. 
+```
+>>> {x: x+' doo' for x in ('doobie', 'Scooby')}
+{'doobie': 'doobie doo', 'Scooby': 'Scooby doo'}
+# by the end of this class we'll be singing the entire theme song with Python
+```
 
 ---
 
@@ -106,7 +137,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937 days
 
 b.  
 ```
@@ -114,7 +145,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513 days
 
 c.  
 ```
@@ -122,7 +153,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850 days
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
