@@ -8,26 +8,17 @@ def donuts(count):
     form 'Number of donuts: <count>', where <count> is the number
     passed in. However, if the count is 10 or more, then use the word
     'many' instead of the actual count.
-
-    >>> donuts(4)
-    'Number of donuts: 4'
-    >>> donuts(9)
-    'Number of donuts: 9'
-    >>> donuts(10)
-    'Number of donuts: many'
-    >>> donuts(99)
-    'Number of donuts: many'
     """
-    raise NotImplementedError
-    
+ 
     # start!
-    def donuts(count):
-	if count < 10:
-		numberofdonuts = count
-	else:
-		numberofdonuts = 'many'
-	return 'Number of donuts: ' + str(numberofdonuts)
-	>>> donuts(4)
+def donuts(count):
+... 	if count < 10:
+... 		numberofdonuts = count
+... 	else:
+... 		numberofdonuts = 'many'
+... 	return 'Number of donuts: ' + str(numberofdonuts)
+... 
+>>> donuts(4)
 'Number of donuts: 4'
 
 
@@ -47,7 +38,14 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+#start!
+def both_ends(s):
+... 	if len(s) < 2:
+... 		return ''
+... 	return s[0:2] + s[-2:]
+... 
+>>> both_ends('spring')
+'spng'
 
 
 def fix_start(s):
@@ -66,8 +64,16 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
-
+#start!
+def fix_start(s):
+... 	char = s[0]
+... 	length = len(s)
+... 	s = s.replace(char, '*')
+... 	s = char + s[1:]
+... 	return s
+... 
+>>> fix_start('aardvark')
+'a*rdv*rk'
 
 def mix_up(a, b):
     """
@@ -84,7 +90,14 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+#start!
+>>> def mix_up(a, b):
+...     swap_a = b[:2] + a[2:]
+...     swap_b = a[:2] + b[2:]
+...     return swap_a + ' ' + swap_b
+... 
+>>> mix_up('mix', 'pod')
+'pox mid'
 
 
 def verbing(s):
@@ -101,7 +114,18 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+#start!!!
+>>> def verbing(s):
+...     length = len(s)
+...     if length > 2:
+...             if s[-3:] == 'ing':
+...                     s += 'ly'
+...             else:
+...                     s += 'ing'
+...     return s
+... 
+>>> verbing('hail')
+'hailing'
 
 
 def not_bad(s):
@@ -121,8 +145,17 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
-
+ #start!
+ >>> def not_bad(s):
+...     ynot = s.find('not')
+...     ybad = s.find('bad')
+...     if ybad > ynot:
+...             s = s.replace(s[ynot:(ybad+3)], 'good')
+...     return s
+... 
+>>> not_bad('This dinner is not that bad!')
+'This dinner is good!'
+#whatever you say, computer
 
 def front_back(a, b):
     """
@@ -140,4 +173,24 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+#start!
+>>> def front_back(a, b):
+...     alength = len(a)
+...     blength = len(b)
+...     if alength % 2 == 0:
+...             aindex = alength //2
+...     else:
+...             aindex = (alength //2) + 1
+...     if blength % 2 == 0:
+...             bindex = blength //2
+...     else:
+...             bindex = (blength //2) + 1
+...     afront = a[0:aindex]
+...     aback = a[aindex:]
+...     bfront = b[0:bindex]
+...     bback = b[bindex:]
+...     return afront + bfront + aback + bback
+... 
+>>> front_back('abcd', 'xy')
+'abxcdy'
+#woohoo!
