@@ -13,7 +13,7 @@ import pandas as pd
 
 def smallest_gap(fname, col1, col2, result_col):
     data = pd.read_csv(fname)
-    diff = abs(data[col1] - data[col2])
+    diff = abs(data[col1] - data[col2]) #you gotta put abs in here to get the number closest to zero
     smallest = data[diff == diff.min()]
     return smallest[result_col].values[0]
 
