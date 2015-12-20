@@ -6,14 +6,19 @@
 
 # The below skeleton is optional.  You can use it or you can write the script with an approach of your choice.
 
+# it's PANDAS TIME!
+# http://imgur.com/gallery/CVJw1
 
-import csv
+import pandas as pd
 
-  def read_data(data):
-   # COMPLETE THIS FUNCTION
+def smallest_gap(fname, col1, col2, result_col):
+    data = pd.read_csv(fname)
+    diff = abs(data[col1] - data[col2])
+    smallest = data[diff == diff.min()]
+    return smallest[result_col].values[0]
 
-  def get_min_score_difference(self, parsed_data):
-    # COMPLETE THIS FUNCTION
+team = smallest_gap('football.csv', 'Goals', 'Goals Allowed', 'Team')
+print (team)
 
-  def get_team(self, index_value, parsed_data):
-    # COMPLETE THIS FUNCTION
+Bryan:anaconda bryanbumgardner$ python parse_csv.py 
+Aston_Villa
