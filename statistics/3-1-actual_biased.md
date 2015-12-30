@@ -1,6 +1,7 @@
 [Think Stats Chapter 3 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2004.html#toc31) (actual vs. biased)
 
 >> The code, which is explained in the markdown. I just wrote a program to do this. I followed his example but explained each and every line when it wasn't redundant. 
+
 ```
 from __future__ import print_function
 
@@ -51,4 +52,4 @@ pmf.Mean()
 biased.Mean()
 # get the means of both the pmfs with a function. 
 ```
->>
+
