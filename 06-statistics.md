@@ -74,14 +74,17 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> We know he had a twin, so the given probabilities are actually misleading. We don't want to include all births if we already know Elvis had a twin, we just want to know: Since he was a twin, what is the likelihood he was identical and not fraternal? We need to simplify the probabilities to be within birth events. 
+The likelihood he was identical is 1/3.4. I am not sure this is correct, because I can't logically get this to fit into Bayesian statistical models. 
+
+
 
 ---
 
 ###Q8. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Frequentists base their decisions on the likelihood (or otherwise) of an event depending on the margin of error. Bayesian statistics use lots of inference rather than relying exclusively on likelihood or statistical relevance. I like Bayes much, much better. It relys on basic observations of the actual problem, which while making answers that can't be perfectly empirical, are much less likely to have silly errors made because of blind dedication to the data. The world isn't easily described with x and n, so we shouldn't base decisions on them without accounting for the weirdness of the universe. 
 
 ---
 
